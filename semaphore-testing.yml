@@ -2,7 +2,7 @@
 # create a file in the home directory to test Semaphore setup
 - name: Testing Semaphore
   hosts: hosts # test inventory lives on Semaphore right now
-  become: yes
+  #become: yes
   #become_method: sudo
 
   tasks:
@@ -20,3 +20,5 @@
         shell: /sbin/nologin
         create_home: no
         comment: "test, nologin user"
+      become: yes
+      become_method: sudo
