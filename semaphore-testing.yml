@@ -2,8 +2,6 @@
 # create a file in the home directory to test Semaphore setup
 - name: Testing Semaphore
   hosts: hosts # test inventory lives on Semaphore right now
-  #become: yes
-  #become_method: sudo
 
   tasks:
     - name: Create file in home directory
@@ -11,10 +9,7 @@
         path: "~/semaphore-was-here.txt"
         state: touch
 
-    - name: Create the user 'semaphore'
-      become: yes
-      become_method: sudo
-      # creating user without login shell or password
+    - name: Create the user 'semaphore' # creating user without login shell or password
       user:
         name: semaphore
         shell: /sbin/nologin
