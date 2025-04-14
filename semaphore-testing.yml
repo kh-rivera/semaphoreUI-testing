@@ -21,4 +21,4 @@
         create_home: no
         comment: "test, nologin user"
       become: yes
-      become_method: sudo
+      #become_method: sudo
