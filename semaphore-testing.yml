@@ -3,7 +3,7 @@
 - name: Testing Semaphore
   hosts: hosts # test inventory lives on Semaphore right now
   become: yes
-  become_method: sudo
+  #become_method: sudo
 
   tasks:
     - name: Create file in home directory
