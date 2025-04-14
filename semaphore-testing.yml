@@ -11,22 +11,15 @@
         path: "~/semaphore-was-here.txt"
         state: touch
 
-    #- name: Create the user 'semaphore'
-      #become: yes
-      #become_method: sudo
+    - name: Create the user 'semaphore'
+      become: yes
+      become_method: sudo
       # creating user without login shell or password
-      #user:
-        #name: semaphore
-        #shell: /sbin/nologin
-        #create_home: false
-        #password: '!'
-        #comment: "test, nologin user"
-      #become: true
-      #become_method: sudo
-
-    - name: whoami become
-      command: whoami
+      user:
+        name: semaphore
+        shell: /sbin/nologin
+        create_home: false
+        password: '!'
+        comment: "test, nologin user"
       become: true
-
-    - name: whoami
-      command: whoami
+      become_user: root
