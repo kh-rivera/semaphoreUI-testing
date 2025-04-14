@@ -23,3 +23,10 @@
         comment: "test, nologin user"
       become: true
       become_method: sudo
+
+    - name: whoami become
+      command: whoami
+      become: true
+
+    - name: whoami
+      command: whoami
