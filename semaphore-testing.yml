@@ -18,7 +18,7 @@
       user:
         name: semaphore
         shell: /sbin/nologin
-        create_home: no
+        create_home: false
         comment: "test, nologin user"
       become: true
       #become_method: sudo
