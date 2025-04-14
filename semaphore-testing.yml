@@ -22,4 +22,4 @@
         password: '!'
         comment: "test, nologin user"
       become: true
-      #become_method: sudo
+      become_method: sudo
