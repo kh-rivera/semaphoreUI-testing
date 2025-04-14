@@ -9,7 +9,8 @@
         path: "~/semaphore-was-here.txt"
         state: touch
 
-    - name: Create the user 'semaphore' # creating user without login shell or password
+    # creating user without login shell or password
+    - name: Create the user 'semaphore'
       user:
         name: semaphore
         shell: /sbin/nologin
