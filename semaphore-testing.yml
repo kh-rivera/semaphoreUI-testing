@@ -16,3 +16,5 @@
       user:
         name: semaphore
         shell: /sbin/nologin
+        create_home: no
+        comment: "test, nologin user"
