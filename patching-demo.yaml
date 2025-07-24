@@ -1,11 +1,10 @@
 ---
 - name: Update machines playbook
   hosts: all
-  become: yes
-  become_user: dynamo
 
   tasks:
     - name: Update Machines
       apt:
         update_cache: yes
         upgrade: yes
+      become: true
