@@ -1,5 +1,5 @@
 ---
-- name: Update machines, create a file
+- name: Update machines playbook
   hosts: demo
   become: yes
 
