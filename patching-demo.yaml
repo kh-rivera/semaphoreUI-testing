@@ -1,6 +1,6 @@
 ---
 - name: Update machines playbook
-  hosts: demo
+  hosts: all
   become: yes
 
   tasks:
