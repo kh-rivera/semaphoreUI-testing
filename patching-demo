@@ -1,0 +1,10 @@
+---
+- name: Update machines, create a file
+  hosts: demo
+  become: yes
+
+  tasks:
+    - name: Update Machines
+      apt:
+        update_cache: yes
+        upgrade: yes
