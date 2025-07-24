@@ -1,11 +1,12 @@
 - name: Create a file playbook
   hosts: demo
   become: yes
+  become_user: dynamo
 
   tasks:     
     - name: Create file in home directory
       file:
         path: "~/awx-was-here.txt"
         state: touch
-        owner: landscape
-        group: root
+        owner: dynamo
+        group: dynamo
