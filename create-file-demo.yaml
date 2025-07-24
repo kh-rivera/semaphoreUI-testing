@@ -1,0 +1,11 @@
+- name: Update machines, create a file
+  hosts: demo
+  become: yes
+
+  tasks:     
+    - name: Create file in home directory
+      file:
+        path: "~/awx-was-here.txt"
+        state: touch
+        owner: landscape
+        group: root
